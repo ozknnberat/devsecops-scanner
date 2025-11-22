@@ -1,10 +1,9 @@
 import os
 
-def veritabanina_baglan():
-    # GUVENLIK HATASI: Sifreyi kodun icine acikca yaziyoruz!
-    api_sifresi = "12345-COK-GIZLI-SIFRE"
+def login_system():
+    # GUVENLIK HATASI: Degisken adi 'password' olunca robot yakalar!
+    password = "12345-SUPER-GIZLI" 
+    
+    print("Giris yapildi: " + password)
 
-    if api_sifresi:
-        print("Baglanti basarili...")
-
-veritabanina_baglan()
+login_system()
