@@ -1,0 +1,21 @@
+name: DevSecOps Guvenlik Taramasi
+
+on: [push]
+
+jobs:
+  guvenlik-taramasi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kodlari Cek
+        uses: actions/checkout@v3
+
+      - name: Python Kur
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Tarayiciyi Kur (Bandit)
+        run: pip install bandit
+
+      - name: Taramayi Baslat 🚨
+        run: bandit -r app.py
