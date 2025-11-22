@@ -1,9 +1,10 @@
 import os
 
 def login_system():
-    # GUVENLIK HATASI: Degisken adi 'password' olunca robot yakalar!
-    password = "12345-SUPER-GIZLI" 
+    # HATAYI DÜZELTME: Şifreyi koddan çıkarıp Ortam Değişkeni'nden okuyoruz (Güvenli Yöntem)
+    password = os.environ.get("DB_PASSWORD") 
     
-    print("Giris yapildi: " + password)
+    if password:
+        print("Baglanti basarili ve guvenli.")
 
 login_system()
