@@ -14,8 +14,8 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Tarayiciyi Kur (Bandit)
+      - name: Guvenlik Aracini Kur (Bandit)
         run: pip install bandit
 
-      - name: Taramayi Baslat 🚨
+      - name: Taramayi Baslat (Hata Varsa Durdur) 🚨
         run: bandit -r app.py
